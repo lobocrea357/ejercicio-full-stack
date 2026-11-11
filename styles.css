@@ -1,0 +1,118 @@
+/* =========================================================
+   BASE DEL CSS (Ya lista para empezar)
+   Reglas de este ejercicio:
+   - Todo simple y directo.
+   - NO uses variables de CSS (nada de --color ni var()).
+   - NO uses CSS Grid (usa Flexbox: display: flex).
+   ========================================================= */
+
+/* Reinicio básico de márgenes y cajas */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales de la página */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* Encabezado de ejemplo (puedes cambiar los colores si quieres) */
+.encabezado {
+  background-color: #2563eb;
+  color: #ffffff;
+  text-align: center;
+  padding: 32px 16px;
+  margin-bottom: 24px;
+}
+
+.encabezado h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  font-size: 15px;
+  color: #dbeafe;
+}
+
+/* Contenedor principal centrado */
+.contenedor {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Clase útil para ocultar elementos desde JavaScript */
+.oculto {
+  display: none;
+}
+
+/* Pie de página básico */
+.pie {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  padding: 24px 16px;
+  margin-top: 32px;
+}
+
+/* =========================================================
+   A PARTIR DE AQUÍ TE TOCA A TI (Revisa el README.md)
+   ========================================================= */
+
+/* TODO 1: Tarjetas de resumen (.resumen, .tarjeta-resumen, .numero, .etiqueta)
+   - Pon las 3 tarjetas en fila usando Flexbox (display: flex, gap: 16px).
+   - Dale a cada .tarjeta-resumen fondo blanco, bordes redondeados, padding y flex: 1.
+   - Centra el texto y haz que .numero se vea grande y en negrita.
+*/
+
+
+/* TODO 2: Panel del formulario (.panel-formulario, .formulario, .campo, input, select, .btn-agregar, .mensaje-error)
+   - Dale a .panel-formulario fondo blanco, padding, bordes redondeados y margen inferior.
+   - Alinea los campos de .formulario en fila con Flexbox (y flex-wrap: wrap para que no se rompa en pantallas pequeñas).
+   - Estila los input, select y el botón .btn-agregar (colores, padding, borde redondeado, cursor: pointer).
+   - Agrega un efecto :hover al botón .btn-agregar.
+   - Estila .mensaje-error en color rojo suave para que destaque cuando aparezca.
+*/
+
+
+/* TODO 3: Panel de la lista y filtros (.panel-lista, .cabecera-lista, .filtros, .btn-filtro, .btn-filtro.activo)
+   - Dale a .panel-lista fondo blanco, padding y bordes redondeados.
+   - En .cabecera-lista, separa el título "Lista de tareas" de los botones de filtro con Flexbox (justify-content: space-between).
+   - Estila los botones .btn-filtro y resalta el botón que tenga la clase .activo.
+*/
+
+
+/* TODO 4: Cada tarjeta de tarea (.lista-tareas, .tarea, .tarea-info, .tarea-texto, .tarea-acciones)
+   - Quita los puntos de la lista en .lista-tareas (list-style: none).
+   - Alinea el contenido de cada .tarea con Flexbox (texto a la izquierda, botones a la derecha).
+   - Dale borde suave, fondo claro o blanco, padding, bordes redondeados y separación entre tareas.
+*/
+
+
+/* TODO 5: Etiquetas de prioridad (.badge, .prioridad-alta, .prioridad-media, .prioridad-baja)
+   - Haz que .badge parezca una pequeña píldora (padding pequeño, border-radius, font-size pequeño, negrita).
+   - Da un color distinto a cada prioridad:
+     * .prioridad-alta  -> tono rojo
+     * .prioridad-media -> tono amarillo / naranja
+     * .prioridad-baja  -> tono verde
+*/
+
+
+/* TODO 6: Botones de completar y eliminar (.btn-completar, .btn-eliminar)
+   - Dales padding, bordes redondeados, sin borde por defecto y cursor: pointer.
+   - Color verde o azul para .btn-completar y rojo para .btn-eliminar.
+   - Agrega un efecto :hover a ambos botones.
+*/
+
+
+/* TODO 7: Estado completada y mensaje vacío (.tarea.completada, .mensaje-vacio)
+   - Cuando una .tarea tenga la clase .completada, baja su opacidad (ej. opacity: 0.7)
+     y tacha el texto (.tarea.completada .tarea-texto { text-decoration: line-through; }).
+   - Centra y dale color gris suave a .mensaje-vacio.
+*/

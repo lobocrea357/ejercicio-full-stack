@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Tareas del Curso</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- 1. ENCABEZADO PRINCIPAL -->
+  <header class="encabezado">
+    <h1>Mis Tareas del Curso</h1>
+    <p class="subtitulo">Organiza tus pendientes de estudio paso a paso</p>
+  </header>
+
+  <!-- 2. CONTENIDO PRINCIPAL -->
+  <main class="contenedor">
+
+    <!-- 2.1 Tarjetas de resumen (Total, Pendientes, Completadas) -->
+    <section class="resumen">
+      <div class="tarjeta-resumen">
+        <span class="numero" id="total-tareas">3</span>
+        <span class="etiqueta">Total</span>
+      </div>
+      <div class="tarjeta-resumen">
+        <span class="numero" id="tareas-pendientes">2</span>
+        <span class="etiqueta">Pendientes</span>
+      </div>
+      <div class="tarjeta-resumen">
+        <span class="numero" id="tareas-completadas">1</span>
+        <span class="etiqueta">Completadas</span>
+      </div>
+    </section>
+
+    <!-- 2.2 Formulario para agregar nuevas tareas -->
+    <section class="panel-formulario">
+      <h2>Agregar nueva tarea</h2>
+      <form id="formulario-tarea" class="formulario">
+        <div class="campo">
+          <label for="input-tarea">¿Qué necesitas hacer?</label>
+          <input
+            type="text"
+            id="input-tarea"
+            placeholder="Ej: Practicar Flexbox en CSS"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="campo">
+          <label for="select-prioridad">Prioridad</label>
+          <select id="select-prioridad">
+            <option value="baja">Baja</option>
+            <option value="media" selected>Media</option>
+            <option value="alta">Alta</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-agregar">Agregar tarea</button>
+      </form>
+
+      <!-- Mensaje de error oculto por defecto (lo mostrarás con JS si el input está vacío) -->
+      <p id="mensaje-error" class="mensaje-error oculto">
+        Por favor, escribe una tarea antes de agregar.
+      </p>
+    </section>
+
+    <!-- 2.3 Lista de tareas y botones de filtro -->
+    <section class="panel-lista">
+      <div class="cabecera-lista">
+        <h2>Lista de tareas</h2>
+        <div class="filtros">
+          <button type="button" class="btn-filtro activo" data-filtro="todas">Todas</button>
+          <button type="button" class="btn-filtro" data-filtro="pendientes">Pendientes</button>
+          <button type="button" class="btn-filtro" data-filtro="completadas">Completadas</button>
+        </div>
+      </div>
+
+      <!-- Tareas de ejemplo iniciales para que puedas diseñar el CSS desde el principio -->
+      <ul id="lista-tareas" class="lista-tareas">
+        <li class="tarea">
+          <div class="tarea-info">
+            <span class="badge prioridad-alta">Alta</span>
+            <p class="tarea-texto">Repasar etiquetas semánticas de HTML5</p>
+          </div>
+          <div class="tarea-acciones">
+            <button type="button" class="btn-completar">Completar</button>
+            <button type="button" class="btn-eliminar">Eliminar</button>
+          </div>
+        </li>
+
+        <li class="tarea">
+          <div class="tarea-info">
+            <span class="badge prioridad-media">Media</span>
+            <p class="tarea-texto">Estilar las tarjetas usando Flexbox</p>
+          </div>
+          <div class="tarea-acciones">
+            <button type="button" class="btn-completar">Completar</button>
+            <button type="button" class="btn-eliminar">Eliminar</button>
+          </div>
+        </li>
+
+        <li class="tarea completada">
+          <div class="tarea-info">
+            <span class="badge prioridad-baja">Baja</span>
+            <p class="tarea-texto">Leer el archivo README.md del proyecto</p>
+          </div>
+          <div class="tarea-acciones">
+            <button type="button" class="btn-completar">Deshacer</button>
+            <button type="button" class="btn-eliminar">Eliminar</button>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Mensaje cuando no hay tareas visibles -->
+      <p id="mensaje-vacio" class="mensaje-vacio oculto">
+        No hay tareas para mostrar en esta vista.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- 3. PIE DE PÁGINA -->
+  <footer class="pie">
+    <p>Ejercicio práctico de HTML, CSS y JavaScript</p>
+  </footer>
+
+  <!-- Archivo JavaScript al final del body -->
+  <script src="app.js"></script>
+</body>
+</html>
